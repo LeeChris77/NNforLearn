@@ -36,11 +36,23 @@ namespace MathFunction_ForPratctice
 
             OutputFile OPF = new OutputFile();
             List<double> rangeList = OutputFile.CRTlist(-5, 5, 0.1);
-            OPF.Data_toTXT(rangeList, "", @"D:\Desktop\Activation_Data\sigmoid.txt");
+            OPF.Data_toTXT(rangeList, "Identity", @"D:\Desktop\Activation_Data\Identity.txt");
+            OPF.Data_toTXT(rangeList, "Sigmoid", @"D:\Desktop\Activation_Data\Sigmoid.txt");
+            OPF.Data_toTXT(rangeList, "Binarystep", @"D:\Desktop\Activation_Data\Binarystep.txt");
+            OPF.Data_toTXT(rangeList, "Tanh", @"D:\Desktop\Activation_Data\Tanh.txt");
+            //OPF.Data_toTXT(rangeList, "Arctan", @"D:\Desktop\Activation_Data\Arctan.txt");
+            OPF.Data_toTXT(rangeList, "Softsign", @"D:\Desktop\Activation_Data\Softsign.txt");
+            OPF.Data_toTXT(rangeList, "Relu", @"D:\Desktop\Activation_Data\Relu.txt");
+            OPF.Data_toTXT(rangeList, "Leakyrelu", @"D:\Desktop\Activation_Data\Leakyrelu.txt");
+            OPF.Data_toTXT(rangeList, "Bentidentity", @"D:\Desktop\Activation_Data\Bentidentity.txt");
+            OPF.Data_toTXT(rangeList, "Sinusoid", @"D:\Desktop\Activation_Data\Sinusoid.txt");
+            OPF.Data_toTXT(rangeList, "Sinc", @"D:\Desktop\Activation_Data\Sinc.txt");
+            OPF.Data_toTXT(rangeList, "Gaussian", @"D:\Desktop\Activation_Data\Gaussian.txt");
 
-            
 
-            
+
+
+
 
 
 
