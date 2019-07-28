@@ -69,7 +69,63 @@ namespace MathFunction_ForPratctice
                 case "Softsign":
                     for (int i = 0; i < Data.Count; i++)
                     {
-                        sw.Write(Data[i].ToString("F4") + " " + (act.Func_ArcTan(Data)[i]).ToString("F8") + Environment.NewLine);
+                        sw.Write(Data[i].ToString("F4") + " " + (act.Func_Softsign(Data)[i]).ToString("F8") + Environment.NewLine);
+                    }
+                    sw.Close();
+                    Console.WriteLine("建置檔案成功!檔案路徑為:" + path);
+                    break;
+                case "Relu":
+                    for (int i = 0; i < Data.Count; i++)
+                    {
+                        sw.Write(Data[i].ToString("F4") + " " + (act.Func_ReLU(Data)[i]).ToString("F8") + Environment.NewLine);
+                    }
+                    sw.Close();
+                    Console.WriteLine("建置檔案成功!檔案路徑為:" + path);
+                    break;
+                case "Leakyrelu":
+                    for (int i = 0; i < Data.Count; i++)
+                    {
+                        sw.Write(Data[i].ToString("F4") + " " + (act.Func_LeakyReLU(Data)[i]).ToString("F8") + Environment.NewLine);
+                    }
+                    sw.Close();
+                    Console.WriteLine("建置檔案成功!檔案路徑為:" + path);
+                    break;
+                case "Prelu":
+                    for (int i = 0; i < Data.Count; i++)
+                    {
+                        sw.Write(Data[i].ToString("F4") + " " + (act.Func_PReLU(Data)[i]).ToString("F8") + Environment.NewLine);
+                    }
+                    sw.Close();
+                    Console.WriteLine("建置檔案成功!檔案路徑為:" + path);
+                    break;
+                case "Bentidentity":
+                    for (int i = 0; i < Data.Count; i++)
+                    {
+                        sw.Write(Data[i].ToString("F4") + " " + (act.Func_BentIdentity(Data)[i]).ToString("F8") + Environment.NewLine);
+                    }
+                    sw.Close();
+                    Console.WriteLine("建置檔案成功!檔案路徑為:" + path);
+                    break;
+                case "Sinusoid":
+                    for (int i = 0; i < Data.Count; i++)
+                    {
+                        sw.Write(Data[i].ToString("F4") + " " + (act.Func_Sinusoid(Data)[i]).ToString("F8") + Environment.NewLine);
+                    }
+                    sw.Close();
+                    Console.WriteLine("建置檔案成功!檔案路徑為:" + path);
+                    break;
+                case "Sinc":
+                    for (int i = 0; i < Data.Count; i++)
+                    {
+                        sw.Write(Data[i].ToString("F4") + " " + (act.Func_Sinc(Data)[i]).ToString("F8") + Environment.NewLine);
+                    }
+                    sw.Close();
+                    Console.WriteLine("建置檔案成功!檔案路徑為:" + path);
+                    break;
+                case "Gaussian":
+                    for (int i = 0; i < Data.Count; i++)
+                    {
+                        sw.Write(Data[i].ToString("F4") + " " + (act.Func_Gaussian(Data)[i]).ToString("F8") + Environment.NewLine);
                     }
                     sw.Close();
                     Console.WriteLine("建置檔案成功!檔案路徑為:" + path);
