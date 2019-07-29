@@ -47,7 +47,7 @@ namespace MathFunction_ForPratctice
             OPF.Data_toTXT(rangeList, "Bentidentity", @"D:\Desktop\Activation_Data\Bentidentity.txt");
             OPF.Data_toTXT(rangeList, "Sinusoid", @"D:\Desktop\Activation_Data\Sinusoid.txt");
             OPF.Data_toTXT(rangeList, "Sinc", @"D:\Desktop\Activation_Data\Sinc.txt");
-            //OPF.Data_toTXT(rangeList, "Gaussian", @"D:\Desktop\Activation_Data\Gaussian.txt");
+            OPF.Data_toTXT(rangeList, "Gaussian", @"D:\Desktop\Activation_Data\Gaussian.txt");
 
 
 
