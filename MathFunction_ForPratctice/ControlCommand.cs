@@ -24,27 +24,27 @@ namespace MathFunction_ForPratctice
                                                {0, 0 ,1 } };
 
             //Console Block
-            Loss loss = new Loss();
-            Console.WriteLine("MAE:" + loss.MAE(y_true, y_pred));
-            Console.WriteLine("MSE:" + loss.MSE(y_true, y_pred));
-            Console.WriteLine("RMAE:" + loss.RMSE(y_true, y_pred));
-            Console.WriteLine("MPAE:" + loss.MAPE(y_true, y_pred) + "%");
-            Console.WriteLine("SMAPE:" + loss.SMAPE(y_true, y_pred) + "%");
-            Console.WriteLine("Mean Huberloss:" + loss.Mean_huberloss(y_true, y_pred, 10));
-            Console.WriteLine("Cross Entropy:" + loss.Cross_entropy(data, encode));
+            //Loss loss = new Loss();
+            //Console.WriteLine("MAE:" + loss.MAE(y_true, y_pred));
+            //Console.WriteLine("MSE:" + loss.MSE(y_true, y_pred));
+            //Console.WriteLine("RMAE:" + loss.RMSE(y_true, y_pred));
+            //Console.WriteLine("MPAE:" + loss.MAPE(y_true, y_pred) + "%");
+            //Console.WriteLine("SMAPE:" + loss.SMAPE(y_true, y_pred) + "%");
+            //Console.WriteLine("Mean Huberloss:" + loss.Mean_huberloss(y_true, y_pred, 10));
+            //Console.WriteLine("Cross Entropy:" + loss.Cross_entropy(data, encode));
 
 
             OutputFile OPF = new OutputFile();
             List<double> rangeList = OutputFile.CRTlist(-5, 5, 0.1);
             OPF.Data_toTXT(rangeList, "Identity", @"D:\Desktop\Activation_Data\Identity.txt");
             OPF.Data_toTXT(rangeList, "Sigmoid", @"D:\Desktop\Activation_Data\Sigmoid.txt");
-            OPF.Data_toTXT(rangeList, "Binarystep", @"D:\Desktop\Activation_Data\Binarystep.txt");
+            OPF.Data_toTXT(rangeList, "BinaryStep", @"D:\Desktop\Activation_Data\BinaryStep.txt");
             OPF.Data_toTXT(rangeList, "Tanh", @"D:\Desktop\Activation_Data\Tanh.txt");
             //OPF.Data_toTXT(rangeList, "Arctan", @"D:\Desktop\Activation_Data\Arctan.txt");
             OPF.Data_toTXT(rangeList, "Softsign", @"D:\Desktop\Activation_Data\Softsign.txt");
-            OPF.Data_toTXT(rangeList, "Relu", @"D:\Desktop\Activation_Data\Relu.txt");
-            OPF.Data_toTXT(rangeList, "Leakyrelu", @"D:\Desktop\Activation_Data\Leakyrelu.txt");
-            OPF.Data_toTXT(rangeList, "Bentidentity", @"D:\Desktop\Activation_Data\Bentidentity.txt");
+            OPF.Data_toTXT(rangeList, "ReLU", @"D:\Desktop\Activation_Data\ReLU.txt");
+            OPF.Data_toTXT(rangeList, "LeakyReLU", @"D:\Desktop\Activation_Data\LeakyReLU.txt");
+            OPF.Data_toTXT(rangeList, "BentIdentity", @"D:\Desktop\Activation_Data\BentIdentity.txt");
             OPF.Data_toTXT(rangeList, "Sinusoid", @"D:\Desktop\Activation_Data\Sinusoid.txt");
             OPF.Data_toTXT(rangeList, "Sinc", @"D:\Desktop\Activation_Data\Sinc.txt");
             OPF.Data_toTXT(rangeList, "Gaussian", @"D:\Desktop\Activation_Data\Gaussian.txt");

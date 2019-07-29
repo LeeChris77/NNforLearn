@@ -25,6 +25,7 @@ namespace MathFunction_ForPratctice
             Activation act = new Activation();
             StreamWriter sw = new StreamWriter(path);
             List<double> y_cal = new List<double>();
+            int cont = 0;
             switch (FunctionName)
             {
                 case "Identity":
@@ -34,21 +35,21 @@ namespace MathFunction_ForPratctice
                     }
                     break;
                 case "BinaryStep":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_BinaryStep(Data))
                     {
-                        y_cal[i] = act.Func_BinaryStep(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "Sigmoid":
-                    for(int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_Sigmoid(Data))
                     {
-                        y_cal[i] = act.Func_Sigmoid(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "Tanh":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_Tanh(Data))
                     {
-                        y_cal[i] = act.Func_Tanh(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 //case "Arctan":
@@ -60,21 +61,21 @@ namespace MathFunction_ForPratctice
                 //    Console.WriteLine("建置檔案成功!檔案路徑為:" + path);
                 //    break;
                 case "Softsign":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_Softsign(Data))
                     {
-                        y_cal[i] = act.Func_Softsign(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "ReLU":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_ReLU(Data))
                     {
-                        y_cal[i] = act.Func_ReLU(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "LeakyReLU":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_LeakyReLU(Data))
                     {
-                        y_cal[i] = act.Func_LeakyReLU(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 //case "Prelu":
@@ -86,93 +87,93 @@ namespace MathFunction_ForPratctice
                 //    Console.WriteLine("建置檔案成功!檔案路徑為:" + path);
                 //    break;
                 case "SELU":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_SELU(Data))
                     {
-                        y_cal[i] = act.Func_SELU(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "SReLU":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_SReLU(Data))
                     {
-                        y_cal[i] = act.Func_SReLU(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "HardSigmoid":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_HardSigmoid(Data))
                     {
-                        y_cal[i] = act.Func_HardSigmoid(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "HardTanh":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_HardTanh(Data))
                     {
-                        y_cal[i] = act.Func_HardTanh(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "LeCunTanh":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_LeCunTanh(Data))
                     {
-                        y_cal[i] = act.Func_LeCunTanh(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "SoftPlus":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_SoftPlus(Data))
                     {
-                        y_cal[i] = act.Func_SoftPlus(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "Signum":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_Signum(Data))
                     {
-                        y_cal[i] = act.Func_Signum(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "BentIdentity":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_BentIdentity(Data))
                     {
-                        y_cal[i] = act.Func_BentIdentity(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "SymmetricalSigmoid":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_SymmetricalSigmoid(Data))
                     {
-                        y_cal[i] = act.Func_SymmetricalSigmoid(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "LogLog":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_LogLog(Data))
                     {
-                        y_cal[i] = act.Func_LogLog(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "Gaussian":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_Gaussian(Data))
                     {
-                        y_cal[i] = act.Func_Gaussian(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "Absolute":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_Absolute(Data))
                     {
-                        y_cal[i] = act.Func_Absolute(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "Sinusoid":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_Sinusoid(Data))
                     {
-                        y_cal[i] = act.Func_Sinusoid(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "Cos":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_Cos(Data))
                     {
-                        y_cal[i] = act.Func_Cos(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 case "Sinc":
-                    for (int i = 0; i < Data.Count; i++)
+                    foreach (var item in act.Func_Sinc(Data))
                     {
-                        y_cal[i] = act.Func_Sinc(Data)[i];
+                        y_cal.Add(item);
                     }
                     break;
                 default:
@@ -185,9 +186,8 @@ namespace MathFunction_ForPratctice
             {
                 foreach (var item in y_cal)
                 {
-                    int i = 0;
-                    sw.Write(Data[i].ToString("F4") + " " + item.ToString("F8") + Environment.NewLine);
-                    i++;
+                    sw.Write(Data[cont].ToString("F4") + " " + item.ToString("F8") + Environment.NewLine);
+                    cont++;
                 }
                 sw.Close();
                 Console.WriteLine("已建置檔案!File路徑:"+path);
