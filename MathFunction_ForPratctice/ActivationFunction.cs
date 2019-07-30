@@ -46,11 +46,6 @@ namespace Activation
             }
             return tmp;
         }
-        public double SingleTanh(double x) //臨時單一Tanh 修改參考185
-        {
-            double tmp = (Math.Exp(x) - Math.Exp(-x)) / (Math.Exp(x) + Math.Exp(-x));
-            return tmp;
-        }
         public List<double> Func_ArcTan(List<double> inputData) //反正切函式*
         {
             List<double> tmp = new List<double>();
@@ -107,7 +102,7 @@ namespace Activation
         }
         public List<double> Func_RReLU(List<double> inputData) //RReLU
         {
-            double alpha = 1.5;
+            double alpha = 0.5;
             List<double> tmp = new List<double>();
             foreach (var item in inputData)
             {
@@ -146,9 +141,9 @@ namespace Activation
         {
             List<double> tmp = new List<double>();
             double al = 1;
-            double ar = 0.4;
+            double ar = 0.4; 
             double tl = -1.0;
-            double tr = 1;
+            double tr = 1.0;
             foreach (var item in inputData)
             {
                 double cal = 0;
@@ -191,7 +186,8 @@ namespace Activation
             ActivationLib toTanh = new ActivationLib();
             foreach (var item in inputData)
             {
-                double cal = 1.7519 * toTanh.SingleTanh(((2 / 3) * item));
+                double cal = 1.7519 * ((2 / (1 + Math.Exp(-2 * item * 2 / 3))) - 1);
+                //double cal = 1.7519 * toTanh.SingleTanh(((2 / 3) * item));
                 tmp.Add(cal);
             }
             return tmp;
@@ -227,12 +223,12 @@ namespace Activation
             }
             return tmp;
         }
-        public List<double> Func_SymmetricalSigmoid(List<double> inputData) //LeCunTanh
+        public List<double> Func_SymmetricalSigmoid(List<double> inputData) //SymmetricalSigmoid
         {
             List<double> tmp = new List<double>();
             foreach (var item in inputData)
             {
-                double cal = 1 - Math.Exp(-item) / 1 + Math.Exp(-item);
+                double cal = (1 - Math.Exp(-item)) / (1 + Math.Exp(-item));
                 tmp.Add(cal);
             }
             return tmp;
