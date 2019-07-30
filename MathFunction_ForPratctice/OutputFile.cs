@@ -21,7 +21,7 @@ namespace OutputFile
             //}
             return crtlist;
         }  //建立清單 List(起點,終點,遞增步幅)
-        public void Data_toTXT(List<double> Data, string FunctionName, string path)
+        public void ACTdata_toTXT(List<double> Data, string FunctionName, string path)
         {
             ActivationLib act = new ActivationLib();
             StreamWriter sw = new StreamWriter(path);

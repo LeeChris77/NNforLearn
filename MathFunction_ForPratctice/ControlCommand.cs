@@ -37,32 +37,32 @@ namespace Command
 
             OutputFilelib OPF = new OutputFilelib();
             List<double> rangeList = OutputFilelib.CRTlist(-5, 5, 0.1);
-            OPF.Data_toTXT(rangeList, "Identity", @"D:\Desktop\Activation_Data\Identity.txt");
-            OPF.Data_toTXT(rangeList, "BinaryStep", @"D:\Desktop\Activation_Data\BinaryStep.txt");
-            OPF.Data_toTXT(rangeList, "Sigmoid", @"D:\Desktop\Activation_Data\Sigmoid.txt");
-            OPF.Data_toTXT(rangeList, "Tanh", @"D:\Desktop\Activation_Data\Tanh.txt");
-            OPF.Data_toTXT(rangeList, "ArcTan", @"D:\Desktop\Activation_Data\ArcTan.txt");
-            OPF.Data_toTXT(rangeList, "Softsign", @"D:\Desktop\Activation_Data\Softsign.txt");
-            OPF.Data_toTXT(rangeList, "ReLU", @"D:\Desktop\Activation_Data\ReLU.txt");
-            OPF.Data_toTXT(rangeList, "LeakyReLU", @"D:\Desktop\Activation_Data\LeakyReLU.txt");
-            OPF.Data_toTXT(rangeList, "PReLU", @"D:\Desktop\Activation_Data\PReLU.txt");
-            OPF.Data_toTXT(rangeList, "RReLU", @"D:\Desktop\Activation_Data\RReLU.txt");
-            OPF.Data_toTXT(rangeList, "ELU", @"D:\Desktop\Activation_Data\ELU.txt");
-            OPF.Data_toTXT(rangeList, "SELU", @"D:\Desktop\Activation_Data\SELU.txt");
-            OPF.Data_toTXT(rangeList, "SReLU", @"D:\Desktop\Activation_Data\SReLU.txt");
-            OPF.Data_toTXT(rangeList, "HardSigmoid", @"D:\Desktop\Activation_Data\HardSigmoid.txt");
-            OPF.Data_toTXT(rangeList, "HardTanh", @"D:\Desktop\Activation_Data\HardTanh.txt");
-            OPF.Data_toTXT(rangeList, "LeCunTanh", @"D:\Desktop\Activation_Data\LeCunTanh.txt");
-            OPF.Data_toTXT(rangeList, "SoftPlus", @"D:\Desktop\Activation_Data\SoftPlus.txt");
-            OPF.Data_toTXT(rangeList, "Signum", @"D:\Desktop\Activation_Data\Signum.txt");
-            OPF.Data_toTXT(rangeList, "BentIdentity", @"D:\Desktop\Activation_Data\BentIdentity.txt");
-            OPF.Data_toTXT(rangeList, "SymmetricalSigmoid", @"D:\Desktop\Activation_Data\SymmetricalSigmoid.txt");
-            OPF.Data_toTXT(rangeList, "LogLog", @"D:\Desktop\Activation_Data\LogLog.txt");
-            OPF.Data_toTXT(rangeList, "Gaussian", @"D:\Desktop\Activation_Data\Gaussian.txt");
-            OPF.Data_toTXT(rangeList, "Absolute", @"D:\Desktop\Activation_Data\Absolute.txt");
-            OPF.Data_toTXT(rangeList, "Sinusoid", @"D:\Desktop\Activation_Data\Sinusoid.txt");
-            OPF.Data_toTXT(rangeList, "Cos", @"D:\Desktop\Activation_Data\Cos.txt");
-            OPF.Data_toTXT(rangeList, "Sinc", @"D:\Desktop\Activation_Data\Sinc.txt");
+            OPF.ACTdata_toTXT(rangeList, "Identity", @"D:\Desktop\Activation_Data\Identity.txt");
+            OPF.ACTdata_toTXT(rangeList, "BinaryStep", @"D:\Desktop\Activation_Data\BinaryStep.txt");
+            OPF.ACTdata_toTXT(rangeList, "Sigmoid", @"D:\Desktop\Activation_Data\Sigmoid.txt");
+            OPF.ACTdata_toTXT(rangeList, "Tanh", @"D:\Desktop\Activation_Data\Tanh.txt");
+            OPF.ACTdata_toTXT(rangeList, "ArcTan", @"D:\Desktop\Activation_Data\ArcTan.txt");
+            OPF.ACTdata_toTXT(rangeList, "Softsign", @"D:\Desktop\Activation_Data\Softsign.txt");
+            OPF.ACTdata_toTXT(rangeList, "ReLU", @"D:\Desktop\Activation_Data\ReLU.txt");
+            OPF.ACTdata_toTXT(rangeList, "LeakyReLU", @"D:\Desktop\Activation_Data\LeakyReLU.txt");
+            OPF.ACTdata_toTXT(rangeList, "PReLU", @"D:\Desktop\Activation_Data\PReLU.txt");
+            OPF.ACTdata_toTXT(rangeList, "RReLU", @"D:\Desktop\Activation_Data\RReLU.txt");
+            OPF.ACTdata_toTXT(rangeList, "ELU", @"D:\Desktop\Activation_Data\ELU.txt");
+            OPF.ACTdata_toTXT(rangeList, "SELU", @"D:\Desktop\Activation_Data\SELU.txt");
+            OPF.ACTdata_toTXT(rangeList, "SReLU", @"D:\Desktop\Activation_Data\SReLU.txt");
+            OPF.ACTdata_toTXT(rangeList, "HardSigmoid", @"D:\Desktop\Activation_Data\HardSigmoid.txt");
+            OPF.ACTdata_toTXT(rangeList, "HardTanh", @"D:\Desktop\Activation_Data\HardTanh.txt");
+            OPF.ACTdata_toTXT(rangeList, "LeCunTanh", @"D:\Desktop\Activation_Data\LeCunTanh.txt");
+            OPF.ACTdata_toTXT(rangeList, "SoftPlus", @"D:\Desktop\Activation_Data\SoftPlus.txt");
+            OPF.ACTdata_toTXT(rangeList, "Signum", @"D:\Desktop\Activation_Data\Signum.txt");
+            OPF.ACTdata_toTXT(rangeList, "BentIdentity", @"D:\Desktop\Activation_Data\BentIdentity.txt");
+            OPF.ACTdata_toTXT(rangeList, "SymmetricalSigmoid", @"D:\Desktop\Activation_Data\SymmetricalSigmoid.txt");
+            OPF.ACTdata_toTXT(rangeList, "LogLog", @"D:\Desktop\Activation_Data\LogLog.txt");
+            OPF.ACTdata_toTXT(rangeList, "Gaussian", @"D:\Desktop\Activation_Data\Gaussian.txt");
+            OPF.ACTdata_toTXT(rangeList, "Absolute", @"D:\Desktop\Activation_Data\Absolute.txt");
+            OPF.ACTdata_toTXT(rangeList, "Sinusoid", @"D:\Desktop\Activation_Data\Sinusoid.txt");
+            OPF.ACTdata_toTXT(rangeList, "Cos", @"D:\Desktop\Activation_Data\Cos.txt");
+            OPF.ACTdata_toTXT(rangeList, "Sinc", @"D:\Desktop\Activation_Data\Sinc.txt");
 
 
 
