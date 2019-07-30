@@ -34,9 +34,11 @@ namespace Command
             //Console.WriteLine("Mean Huberloss:" + loss.Mean_huberloss(y_true, y_pred, 10));
             //Console.WriteLine("Cross Entropy:" + loss.Cross_entropy(data, encode));
 
-
-            OutputFilelib OPF = new OutputFilelib();
-            List<double> rangeList = OutputFilelib.CRTlist(-5, 5, 0.1);
+            //建立輸出物件
+            OutputFilelib OPF = new OutputFilelib(); 
+            //呼叫CRTlist方法建構一個 輸入資料集合 引數說明:(開始,結束,間距)
+            List<double> rangeList = OutputFilelib.CRTlist(-5, 5, 0.1); 
+            //ACTdata_toTXT引數說明:(傳入List<double>集合, 選用激活函數, @"自定義txt檔儲存路徑")
             OPF.ACTdata_toTXT(rangeList, "Identity", @"D:\Desktop\Activation_Data\Identity.txt");
             OPF.ACTdata_toTXT(rangeList, "BinaryStep", @"D:\Desktop\Activation_Data\BinaryStep.txt");
             OPF.ACTdata_toTXT(rangeList, "Sigmoid", @"D:\Desktop\Activation_Data\Sigmoid.txt");
