@@ -102,7 +102,7 @@ namespace Activation
         }
         public List<double> Func_RReLU(List<double> inputData) //RReLU
         {
-            double alpha = 0.5;
+            double alpha = -0.5;
             List<double> tmp = new List<double>();
             foreach (var item in inputData)
             {

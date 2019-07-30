@@ -37,12 +37,12 @@ namespace Command
             //建立輸出物件
             OutputFilelib OPF = new OutputFilelib(); 
             //呼叫CRTlist方法建構一個 輸入資料集合 引數說明:(開始,結束,間距)
-            List<double> rangeList = OutputFilelib.CRTlist(-5, 5, 0.1); 
+            List<double> rangeList = OutputFilelib.CRTlist(-5, 5, 0.1);
+            //List<double> CList = OutputFilelib.CRTlist(-5, 5, 0.1);
             //ACTdata_toTXT引數說明:(傳入List<double>集合, 選用激活函數, @"自定義txt檔儲存路徑")
             OPF.ACTdata_toTXT(rangeList, "Identity", @"D:\Desktop\Activation_Data\Identity.txt");
             OPF.ACTdata_toTXT(rangeList, "BinaryStep", @"D:\Desktop\Activation_Data\BinaryStep.txt");
             OPF.ACTdata_toTXT(rangeList, "Sigmoid", @"D:\Desktop\Activation_Data\Sigmoid.txt");
-            OPF.ACTdata_toTXT(rangeList, "Tanh", @"D:\Desktop\Activation_Data\Tanh.txt");
             OPF.ACTdata_toTXT(rangeList, "ArcTan", @"D:\Desktop\Activation_Data\ArcTan.txt");
             OPF.ACTdata_toTXT(rangeList, "Softsign", @"D:\Desktop\Activation_Data\Softsign.txt");
             OPF.ACTdata_toTXT(rangeList, "ReLU", @"D:\Desktop\Activation_Data\ReLU.txt");

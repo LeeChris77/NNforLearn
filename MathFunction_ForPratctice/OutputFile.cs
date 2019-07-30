@@ -195,7 +195,7 @@ namespace OutputFile
             {
                 foreach (var item in y_cal)
                 {
-                    sw.Write(Data[cont].ToString("F4") + " " + item.ToString("F8") + Environment.NewLine);
+                    sw.Write(Data[cont].ToString("F4") + "  " + item.ToString("F8") + Environment.NewLine);
                     cont++;
                 }
                 sw.Close();
