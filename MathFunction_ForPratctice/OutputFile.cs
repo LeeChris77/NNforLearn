@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Collections.Generic;
+using Activation;
 //using System.Text;
 
-namespace MathFunction_ForPratctice
+namespace OutputFile
 {
-    class OutputFile
+    class OutputFilelib
     {
         public static List<double> CRTlist(int star, int end, double stride)
         {
@@ -22,7 +23,7 @@ namespace MathFunction_ForPratctice
         }  //建立清單 List(起點,終點,遞增步幅)
         public void Data_toTXT(List<double> Data, string FunctionName, string path)
         {
-            Activation act = new Activation();
+            ActivationLib act = new ActivationLib();
             StreamWriter sw = new StreamWriter(path);
             List<double> y_cal = new List<double>();
             int cont = 0;
@@ -52,14 +53,12 @@ namespace MathFunction_ForPratctice
                         y_cal.Add(item);
                     }
                     break;
-                //case "Arctan":
-                //    for (int i = 0; i < Data.Count; i++)
-                //    {
-                //        sw.Write(Data[i].ToString("F4") + " " + (act.Func_ArcTan(Data)[i]).ToString("F8") + Environment.NewLine);
-                //    }
-                //    sw.Close();
-                //    Console.WriteLine("建置檔案成功!檔案路徑為:" + path);
-                //    break;
+                case "ArcTan":
+                    foreach (var item in act.Func_ArcTan(Data))
+                    {
+                        y_cal.Add(item);
+                    }
+                    break;
                 case "Softsign":
                     foreach (var item in act.Func_Softsign(Data))
                     {
@@ -191,6 +190,10 @@ namespace MathFunction_ForPratctice
                 }
                 sw.Close();
                 Console.WriteLine("已建置檔案!File路徑:"+path);
+            }
+            else
+            {
+                Console.WriteLine("尚未有運算結果!");
             }
             
             

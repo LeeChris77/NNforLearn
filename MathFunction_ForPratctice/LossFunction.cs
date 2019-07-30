@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace MathFunction_ForPratctice
+namespace Loss
 {
-    class Loss
+    class Losslib
     {
         public double MAE(double[] x, double[] y)
         {

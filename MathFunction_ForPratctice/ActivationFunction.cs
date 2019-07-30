@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MathFunction_ForPratctice
+namespace Activation
 {
-    class Activation
+    public class ActivationLib
     {
         public List<double> Func_Identity(List<double> inputData) //恆等函式
         {
@@ -56,8 +56,8 @@ namespace MathFunction_ForPratctice
             List<double> tmp = new List<double>();
             foreach (var item in inputData)
             {
-                //double cal = ;
-                //tmp.Add(cal);
+                double cal = Math.Atan(item);
+                tmp.Add(cal);
             }
             return tmp;
         }
@@ -185,7 +185,7 @@ namespace MathFunction_ForPratctice
         public List<double> Func_LeCunTanh(List<double> inputData) //LeCunTanh
         {
             List<double> tmp = new List<double>();
-            Activation toTanh = new Activation();
+            ActivationLib toTanh = new ActivationLib();
             foreach (var item in inputData)
             {
                 double cal = 1.7519 * toTanh.SingleTanh(((2 / 3) * item));
@@ -264,7 +264,6 @@ namespace MathFunction_ForPratctice
             }
             return tmp;
         }
-        
         public List<double> Func_Sinusoid(List<double> inputData) //正弦函式
         {
             List<double> tmp = new List<double>();

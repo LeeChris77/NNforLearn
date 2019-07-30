@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace MathFunction_ForPratctice
+using OutputFile;
+namespace Command
 {
     class Control
     {
@@ -34,20 +35,20 @@ namespace MathFunction_ForPratctice
             //Console.WriteLine("Cross Entropy:" + loss.Cross_entropy(data, encode));
 
 
-            OutputFile OPF = new OutputFile();
-            List<double> rangeList = OutputFile.CRTlist(-5, 5, 0.1);
-            OPF.Data_toTXT(rangeList, "Identity", @"D:\Desktop\Activation_Data\Identity.txt");
-            OPF.Data_toTXT(rangeList, "Sigmoid", @"D:\Desktop\Activation_Data\Sigmoid.txt");
-            OPF.Data_toTXT(rangeList, "BinaryStep", @"D:\Desktop\Activation_Data\BinaryStep.txt");
-            OPF.Data_toTXT(rangeList, "Tanh", @"D:\Desktop\Activation_Data\Tanh.txt");
-            //OPF.Data_toTXT(rangeList, "Arctan", @"D:\Desktop\Activation_Data\Arctan.txt");
-            OPF.Data_toTXT(rangeList, "Softsign", @"D:\Desktop\Activation_Data\Softsign.txt");
-            OPF.Data_toTXT(rangeList, "ReLU", @"D:\Desktop\Activation_Data\ReLU.txt");
-            OPF.Data_toTXT(rangeList, "LeakyReLU", @"D:\Desktop\Activation_Data\LeakyReLU.txt");
-            OPF.Data_toTXT(rangeList, "BentIdentity", @"D:\Desktop\Activation_Data\BentIdentity.txt");
-            OPF.Data_toTXT(rangeList, "Sinusoid", @"D:\Desktop\Activation_Data\Sinusoid.txt");
-            OPF.Data_toTXT(rangeList, "Sinc", @"D:\Desktop\Activation_Data\Sinc.txt");
-            OPF.Data_toTXT(rangeList, "Gaussian", @"D:\Desktop\Activation_Data\Gaussian.txt");
+            OutputFilelib OPF = new OutputFilelib();
+            List<double> rangeList = OutputFilelib.CRTlist(-5, 5, 0.1);
+            //OPF.Data_toTXT(rangeList, "Identity", @"D:\Desktop\Activation_Data\Identity.txt");
+            //OPF.Data_toTXT(rangeList, "Sigmoid", @"D:\Desktop\Activation_Data\Sigmoid.txt");
+            //OPF.Data_toTXT(rangeList, "BinaryStep", @"D:\Desktop\Activation_Data\BinaryStep.txt");
+            //OPF.Data_toTXT(rangeList, "Tanh", @"D:\Desktop\Activation_Data\Tanh.txt");
+            OPF.Data_toTXT(rangeList, "ArcTan", @"D:\Desktop\Activation_Data\ArcTan.txt");
+            //OPF.Data_toTXT(rangeList, "Softsign", @"D:\Desktop\Activation_Data\Softsign.txt");
+            //OPF.Data_toTXT(rangeList, "ReLU", @"D:\Desktop\Activation_Data\ReLU.txt");
+            //OPF.Data_toTXT(rangeList, "LeakyReLU", @"D:\Desktop\Activation_Data\LeakyReLU.txt");
+            //OPF.Data_toTXT(rangeList, "BentIdentity", @"D:\Desktop\Activation_Data\BentIdentity.txt");
+            //OPF.Data_toTXT(rangeList, "Sinusoid", @"D:\Desktop\Activation_Data\Sinusoid.txt");
+            //OPF.Data_toTXT(rangeList, "Sinc", @"D:\Desktop\Activation_Data\Sinc.txt");
+            //OPF.Data_toTXT(rangeList, "Gaussian", @"D:\Desktop\Activation_Data\Gaussian.txt");
 
 
 
