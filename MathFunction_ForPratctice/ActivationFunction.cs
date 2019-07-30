@@ -107,12 +107,12 @@ namespace Activation
         }
         public List<double> Func_RReLU(List<double> inputData) //RReLU
         {
-            Random alpha = new Random();
+            double alpha = 1.5;
             List<double> tmp = new List<double>();
             foreach (var item in inputData)
             {
                 double cal = 0;
-                if (item < 0) { cal = alpha.NextDouble() * item; } else { cal = item; }
+                if (item < 0) { cal = alpha * item; } else { cal = item; }
                 tmp.Add(cal);
             }
             return tmp;

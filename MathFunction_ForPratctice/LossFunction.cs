@@ -2,7 +2,7 @@
 
 namespace Loss
 {
-    class Losslib
+    public class Losslib
     {
         public double MAE(double[] x, double[] y)
         {

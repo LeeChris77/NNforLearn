@@ -6,7 +6,7 @@ using Activation;
 
 namespace OutputFile
 {
-    class OutputFilelib
+    public class OutputFilelib
     {
         public static List<double> CRTlist(int star, int end, double stride)
         {
