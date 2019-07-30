@@ -77,14 +77,24 @@ namespace OutputFile
                         y_cal.Add(item);
                     }
                     break;
-                //case "Prelu":
-                //    for (int i = 0; i < Data.Count; i++)
-                //    {
-                //        sw.Write(Data[i].ToString("F4") + " " + (act.Func_PReLU(Data)[i]).ToString("F8") + Environment.NewLine);
-                //    }
-                //    sw.Close();
-                //    Console.WriteLine("建置檔案成功!檔案路徑為:" + path);
-                //    break;
+                case "PReLU"://*
+                    foreach (var item in act.Func_PReLU(Data))
+                    {
+                        y_cal.Add(item);
+                    }
+                    break;
+                case "RReLU"://*
+                    foreach (var item in act.Func_RReLU(Data))
+                    {
+                        y_cal.Add(item);
+                    }
+                    break;
+                case "ELU"://*
+                    foreach (var item in act.Func_ELU(Data))
+                    {
+                        y_cal.Add(item);
+                    }
+                    break;
                 case "SELU":
                     foreach (var item in act.Func_SELU(Data))
                     {

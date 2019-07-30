@@ -93,8 +93,9 @@ namespace Activation
             }
             return tmp;
         }
-        public List<double> Func_PReLU(List<double> inputData ,double alpha) //PReLU
+        public List<double> Func_PReLU(List<double> inputData) //PReLU
         {
+            double alpha = 1;
             List<double> tmp = new List<double>();
             foreach (var item in inputData)
             {
@@ -104,19 +105,21 @@ namespace Activation
             }
             return tmp;
         }
-        public List<double> Func_RReLU(List<double> inputData, double alpha) //RReLU
+        public List<double> Func_RReLU(List<double> inputData) //RReLU
         {
+            Random alpha = new Random();
             List<double> tmp = new List<double>();
             foreach (var item in inputData)
             {
                 double cal = 0;
-                if (item < 0) { cal = alpha * item; } else { cal = item; }
+                if (item < 0) { cal = alpha.NextDouble() * item; } else { cal = item; }
                 tmp.Add(cal);
             }
             return tmp;
         }
-        public List<double> Func_ELU(List<double> inputData, double alpha) //ELU
+        public List<double> Func_ELU(List<double> inputData) //ELU
         {
+            double alpha = 1;
             List<double> tmp = new List<double>();
             foreach (var item in inputData)
             {
