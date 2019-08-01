@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Neuros
 {
@@ -6,7 +7,9 @@ namespace Neuros
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string[] ChosseFunctionName = { "Identity", "BinaryStep", "Sigmoid" };
+            StreamWriter sw = new StreamWriter(@"D:\Desktop\Activation_Data\" + ChosseFunctionName[0] + ".txt");
+            Console.WriteLine(@"D:\Desktop\Activation_Data\" + ChosseFunctionName[0]);
         }
     }
 }
