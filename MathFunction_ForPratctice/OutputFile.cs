@@ -15,10 +15,6 @@ namespace OutputFile
             {
                 crtlist.Add(i);
             }
-            //foreach (var item in crtlist)
-            //{
-            //    Console.WriteLine(item);
-            //}
             return crtlist;
         }  //建立清單 List(起點,終點,遞增步幅)
         public void ACTdata_toTXT(List<double> Data, string FunctionName, string path)
