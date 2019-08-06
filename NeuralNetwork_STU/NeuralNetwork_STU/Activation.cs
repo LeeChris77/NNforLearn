@@ -4,15 +4,20 @@ using System.Text;
 
 namespace NeuralNetwork_STU
 {
+    public enum FunctionName { Sigmoid, Identity, ReLU };
     public class Activation
     {
-        private double x = 0.0;
-        private double cal = 0.0;
-        enum ActivationName { Sigmoid, Identity, ReLU };
-        public Activation()
+        public static double FunctionChoose(FunctionName function,double x)
         {
-            int a = (int)ActivationName.Identity;
-            Console.WriteLine(a);
+            double tmp = 0.0;
+            switch (function)
+            {
+                case FunctionName.Sigmoid:
+                    tmp = 1 / (1 + Math.Exp(-x));
+                    break;
+            }
+            return tmp;
         }
+
     }
 }

@@ -7,7 +7,9 @@ namespace NeuralNetwork_STU
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello World!");
-            Activation.acc();
+            Perceptron p = new Perceptron(3);
+            p.Transfer(0);
+            
         }
     }
 }
