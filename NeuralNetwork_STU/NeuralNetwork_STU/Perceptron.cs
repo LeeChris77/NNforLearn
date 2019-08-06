@@ -6,8 +6,8 @@ namespace NeuralNetwork_STU
 {
     class Perceptron
     {
-        private double [] x;
-        private double [] w;
+        private double[] x;
+        private double[] w;
         private double s;
         public double y;
 
@@ -15,6 +15,18 @@ namespace NeuralNetwork_STU
         {
             x = new double[shape];
             w = new double[shape];
+        }
+        public double[] X
+        {
+            get { return x; }
+        }
+        public double[] W
+        {
+            get { return w; }
+        }
+        public double S
+        {
+            get { return s; }
         }
 
         private void Summation()
@@ -30,7 +42,23 @@ namespace NeuralNetwork_STU
         {
             Summation();
             y = Activation.FunctionChoose(function,s);
-            //y = Activation.FunctionOption(optNum, s);
+        }
+
+        public void ReadInput(double [] arr)
+        {
+            Array.Copy(arr, x, x.Length);
+        }
+        public void ReadWeight(double[] arr)
+        {
+            Array.Copy(arr, w, w.Length);
+        }
+        public void RandomWeight()
+        {
+            Random rnd = new Random();
+            for (int i = 0; i < w.Length; i++)
+            {
+                w[i] = rnd.Next(-3,4);
+            }
         }
     }
 }
