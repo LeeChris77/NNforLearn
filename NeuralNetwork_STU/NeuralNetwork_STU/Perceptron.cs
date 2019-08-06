@@ -41,7 +41,21 @@ namespace NeuralNetwork_STU
         public void Transfer(FunctionName function)
         {
             Summation();
-            y = Activation.FunctionChoose(function,s);
+            switch (function)
+            {
+                case FunctionName.Sigmoid:
+                    y = Activation.SigmoidFunction(s);
+                    break;
+                case FunctionName.Identity:
+                    y = Activation.IdentityFunction(s);
+                    break;
+                case FunctionName.ReLU:
+                    y = Activation.ReLUFunction(s);
+                    break;
+                default:
+                    Console.WriteLine("ERROR");
+                    break;
+            }
         }
 
         public void ReadInput(double [] arr)

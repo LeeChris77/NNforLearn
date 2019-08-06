@@ -7,13 +7,6 @@
       <FileName>Perceptron.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NeuralNetwork_STU.Activation">
-    <Position X="6.75" Y="1.25" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Activation.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Enum Name="NeuralNetwork_STU.FunctionName">
     <Position X="1.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
