@@ -8,6 +8,8 @@ namespace NeuralNetwork_STU
     {
         private double[] x;
         private double[] w;
+        private double[,] x1;
+        private double[,] w1;
         private double s;
         public double y;
 
@@ -71,7 +73,7 @@ namespace NeuralNetwork_STU
             Random rnd = new Random();
             for (int i = 0; i < w.Length; i++)
             {
-                w[i] = rnd.Next(-3,4);
+                w[i] = rnd.Next(-5,6);
             }
         }
     }
