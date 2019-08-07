@@ -8,12 +8,15 @@ namespace NeuralNetwork_STU
     {
         private double[] x;
         private double[] w;
-        private double[,] x1;
-        private double[,] w1;
         private double s;
         public double y;
 
         public Perceptron(int shape)
+        {
+            x = new double[shape];
+            w = new double[shape];
+        }
+        public Perceptron(int shape,ActivationFunction functionName)
         {
             x = new double[shape];
             w = new double[shape];
@@ -40,19 +43,22 @@ namespace NeuralNetwork_STU
             }
         }
 
-        public void Transfer(FunctionName function)
+        public void Transfer(ActivationFunction function)
         {
             Summation();
             switch (function)
             {
-                case FunctionName.Sigmoid:
+                case ActivationFunction.Sigmoid:
                     y = Activation.SigmoidFunction(s);
                     break;
-                case FunctionName.Identity:
+                case ActivationFunction.Identity:
                     y = Activation.IdentityFunction(s);
                     break;
-                case FunctionName.ReLU:
+                case ActivationFunction.ReLU:
                     y = Activation.ReLUFunction(s);
+                    break;
+                case ActivationFunction.BinaryStep:
+                    y = Activation.BinaryStepFunction(s);
                     break;
                 default:
                     Console.WriteLine("ERROR");

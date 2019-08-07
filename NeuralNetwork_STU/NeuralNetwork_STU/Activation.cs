@@ -12,7 +12,14 @@ namespace NeuralNetwork_STU
         public static double BinaryStepFunction(double x)//單位階躍函式
         {
             double y_cal;
-            if (x < 0) { y_cal = 0; } else { y_cal = 1; }
+            if (x <= 0.8)
+            {
+                y_cal = 0;
+            }
+            else
+            {
+                y_cal = 1;
+            }
             return y_cal;
         }
         public static double SigmoidFunction(double x) //Sigmoid
