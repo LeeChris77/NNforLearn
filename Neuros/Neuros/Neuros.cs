@@ -1,20 +1,28 @@
 ﻿using System;
-
+using Activation;
 namespace Neuros
 {
-    public class CreateNeuros
+    public class NewNeuros
     {
-        public double NeurosCal(double[]x , double[]w)
+        ActivationLib Act = new ActivationLib();
+        public double OneNeuro(double[]x , double[]w, string ChooseAct)
         {
             double cal=0;
-            if(x.Length == w.Length)
+            double neuroValue = 0;
+            if (x.Length == w.Length)
             {
                 for (int i = 0; i < x.Length; i++)
                 {
                     cal += x[i] * w[i];
                 }
             }
-            return cal;
+            switch (ChooseAct)
+            {
+                case "Sigmoid":
+                    neuroValue = Act.SigmoidFunction(cal);
+                    break;
+            }
+            return neuroValue;
         }
     }
 }
