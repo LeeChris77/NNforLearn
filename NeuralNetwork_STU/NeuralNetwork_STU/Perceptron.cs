@@ -8,18 +8,20 @@ namespace NeuralNetwork_STU
     {
         private double[] x;
         private double[] w;
+        private int Contenum;
         private double s;
-        public double y;
-
+        private double y;
+        private readonly FunctionEnum Function;
         public Perceptron(int shape)
         {
             x = new double[shape];
             w = new double[shape];
         }
-        public Perceptron(int shape,ActivationFunction functionName)
+        public Perceptron(int shape,FunctionEnum functionGet)
         {
             x = new double[shape];
             w = new double[shape];
+            Function = functionGet;
         }
         public double[] X
         {
@@ -33,6 +35,10 @@ namespace NeuralNetwork_STU
         {
             get { return s; }
         }
+        public double Y
+        {
+            get { return y; }
+        }
 
         private void Summation()
         {
@@ -43,21 +49,21 @@ namespace NeuralNetwork_STU
             }
         }
 
-        public void Transfer(ActivationFunction function)
+        public void Transfer()
         {
             Summation();
-            switch (function)
+            switch (Function)
             {
-                case ActivationFunction.Sigmoid:
+                case FunctionEnum.Sigmoid:
                     y = Activation.SigmoidFunction(s);
                     break;
-                case ActivationFunction.Identity:
+                case FunctionEnum.Identity:
                     y = Activation.IdentityFunction(s);
                     break;
-                case ActivationFunction.ReLU:
+                case FunctionEnum.ReLU:
                     y = Activation.ReLUFunction(s);
                     break;
-                case ActivationFunction.BinaryStep:
+                case FunctionEnum.BinaryStep:
                     y = Activation.BinaryStepFunction(s);
                     break;
                 default:
@@ -66,6 +72,7 @@ namespace NeuralNetwork_STU
             }
         }
 
+        //寫入
         public void ReadInput(double [] arr)
         {
             Array.Copy(arr, x, x.Length);
