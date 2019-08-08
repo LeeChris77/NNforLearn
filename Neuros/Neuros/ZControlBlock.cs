@@ -15,6 +15,7 @@ namespace NeurosMain
             double[] x = {bias, 0, 0 };
             double[] w = {bias, 0, 1 };
             //CreateNeuros nur = new CreateNeuros(x, w, 0.8, "sigmoid");
+            
         }
     }
 }
