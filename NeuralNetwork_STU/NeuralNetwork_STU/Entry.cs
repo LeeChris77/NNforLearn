@@ -4,7 +4,7 @@ namespace NeuralNetwork_STU
 {/// <summary>
 /// Layer => Perceptron(所有種類的神經元) => Activation, InputData, Weight
 /// </summary>
-    public enum FunctionEnum { Sigmoid, Identity, ReLU , BinaryStep };
+    public enum ActivationFunction { Sigmoid, Identity, ReLU , BinaryStep };
     class Entry
     {
         static void Main(string[] args)
@@ -15,7 +15,7 @@ namespace NeuralNetwork_STU
             double[] x4 = { 1, 1 };
             double[] w = new double[2];
 
-            Perceptron p1 = new Perceptron(2, FunctionEnum.BinaryStep);
+            Perceptron p1 = new Perceptron(2, ActivationFunction.BinaryStep);
 
             //窮舉權重組合
             for (double i = -5; i < 5; i+=0.01)

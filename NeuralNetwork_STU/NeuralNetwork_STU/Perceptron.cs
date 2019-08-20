@@ -8,20 +8,20 @@ namespace NeuralNetwork_STU
     {
         private double[] x;
         private double[] w;
-        private int Contenum;
         private double s;
         private double y;
-        private readonly FunctionEnum Function;
+        ActivationFunction function;
+
         public Perceptron(int shape)
         {
             x = new double[shape];
             w = new double[shape];
         }
-        public Perceptron(int shape,FunctionEnum functionGet)
+        public Perceptron(int shape,ActivationFunction functionName)
         {
             x = new double[shape];
             w = new double[shape];
-            Function = functionGet;
+            function = functionName;
         }
         public double[] X
         {
@@ -52,18 +52,18 @@ namespace NeuralNetwork_STU
         public void Transfer()
         {
             Summation();
-            switch (Function)
+            switch (function)
             {
-                case FunctionEnum.Sigmoid:
+                case ActivationFunction.Sigmoid:
                     y = Activation.SigmoidFunction(s);
                     break;
-                case FunctionEnum.Identity:
+                case ActivationFunction.Identity:
                     y = Activation.IdentityFunction(s);
                     break;
-                case FunctionEnum.ReLU:
+                case ActivationFunction.ReLU:
                     y = Activation.ReLUFunction(s);
                     break;
-                case FunctionEnum.BinaryStep:
+                case ActivationFunction.BinaryStep:
                     y = Activation.BinaryStepFunction(s);
                     break;
                 default:
@@ -72,7 +72,6 @@ namespace NeuralNetwork_STU
             }
         }
 
-        //寫入
         public void ReadInput(double [] arr)
         {
             Array.Copy(arr, x, x.Length);
