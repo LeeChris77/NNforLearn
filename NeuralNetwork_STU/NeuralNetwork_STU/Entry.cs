@@ -5,6 +5,7 @@ namespace NeuralNetwork_STU
 /// Layer => Perceptron(所有種類的神經元) => Activation, InputData, Weight
 /// </summary>
     public enum ActivationFunction { Sigmoid, Identity, ReLU , BinaryStep };
+    public enum Celltype {Perceptron, Recurrent };
     class Entry
     {
         static void Main(string[] args)

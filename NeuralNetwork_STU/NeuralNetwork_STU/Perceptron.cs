@@ -75,10 +75,12 @@ namespace NeuralNetwork_STU
         public void ReadInput(double [] arr)
         {
             Array.Copy(arr, x, x.Length);
+            //可以用不同寫法
         }
         public void ReadWeight(double[] arr)
         {
             Array.Copy(arr, w, w.Length);
+            //可以用不同寫法
         }
         public void RandomWeight()
         {
