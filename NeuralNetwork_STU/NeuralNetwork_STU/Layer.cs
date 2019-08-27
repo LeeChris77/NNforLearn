@@ -5,41 +5,36 @@ using System.Text;
 
 namespace NeuralNetwork_STU
 {
-    class Layer
+    public class Layer
     {
-        private double[] L_y;
+        public double[] y;
         private int size;
-        private Celltype celltype;
+        private int input_length;
+        private Celltype type;
         private ActivationFunction function;
-        int count=0;
        
-        public Layer(Celltype cell_type, ActivationFunction cell_function)
+        public Layer(Celltype cell_type, ActivationFunction cell_function,int y_length)
         {
             Console.Write("Press This time Layer Cell Size:");
             size = Convert.ToInt32(Console.ReadLine());
-            L_y = new double[size];
-            celltype = cell_type;
+            y = new double[size];
+            type = cell_type;
             function = cell_function;
+            input_length = y_length;
             Create_cell();
         }
-
-        public double[] L_Y
-        {
-            get
-            {
-                return L_y;
-            }
-        }
-
         private void Create_cell()
         {
-            switch (celltype)
+            switch (type)
             {
                 case Celltype.Perceptron:
+                    Perceptron[] cell = new Perceptron[size];
                     for (int i = 0; i < size; i++)
                     {
-                        Perceptron cell = new Perceptron(3, function);
-                        L_y[i] = cell.Y;
+                        cell[i] = new Perceptron(input_length, function);
+                        cell[i].WeightFullOne();
+                        cell[i].Transfer();
+                        y[i] = cell[i].Y;
                     }
                     break;
             }

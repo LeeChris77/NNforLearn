@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NeuralNetwork_STU
 {
-    class Perceptron
+    public class Perceptron
     {
         private double[] x;
         private double[] w;
@@ -81,6 +81,13 @@ namespace NeuralNetwork_STU
         {
             Array.Copy(arr, w, w.Length);
             //可以用不同寫法
+        }
+        public void WeightFullOne()
+        {
+            for (int i = 0; i < w.Length; i++)
+            {
+                w[i] = 1;
+            }
         }
         public void RandomWeight()
         {
