@@ -10,9 +10,8 @@ namespace NeuralNetwork_STU
     {
         static void Main(string[] args)
         {
-            double[] inputData = { 10, 15 };
-            NeuralNetwork nn = new NeuralNetwork(3, inputData);
-            nn.Show();
+            double[] inputData = { 1, 2 };
+            NeuralNetwork nn = new NeuralNetwork(inputData);
             //Console.WriteLine(Activation.ReLUFunction(25)); 
             //Enum.Parse(typeof(enum),string values);
             //double[] x1 = { 0, 0 };
